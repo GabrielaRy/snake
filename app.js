@@ -46,11 +46,10 @@ function startGame() {
     timerId = setInterval(move, intervalTime)
 }
 
-//correct this function to work on different grid size!!
 function move() {
     if(
         (currentSnake[0] - width < 0 && direction === -10)   ||   //if snake has hit top
-        (currentSnake[0] % width === 9 && direction === 1) ||   //hit right
+        (currentSnake[0] % width === 90 && direction === 1) ||   //hit right
         (currentSnake[0] + width >= 100 && direction === 10) ||    //hit bottom
         (currentSnake[0] % width === 0 && direction === -1) ||    //left
         squares[currentSnake[0] + direction].classList.contains('snake') //eat tail
